@@ -190,7 +190,7 @@ video {
 }
 
 .sub-container h4 {
-  background-color: #1270af;
+  background-color: #9580e0;
   padding: 2em; /* Utiliza em en lugar de píxeles */
   margin: 0; /* Elimina márgenes predeterminados */
   font-family: 'Arial', sans-serif;
@@ -252,4 +252,3 @@ video {
     padding: 1em; /* Reducir el padding en pantallas pequeñas */
   }
 }
-
