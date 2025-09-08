@@ -179,7 +179,7 @@ video {
 }
 
 .sub-container h4 {
-  background-color: #e2c19a;
+  background-color: rgb(167, 220, 234);
   padding: 2em; /* Utiliza em en lugar de píxeles */
   margin: 0; /* Elimina márgenes predeterminados */
   font-family: 'Arial', sans-serif;
