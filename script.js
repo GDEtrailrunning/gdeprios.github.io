@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  actualizarDiasRestantes();
-  setInterval(actualizarDiasRestantes, 24*60*60*1000); // Actualizar diario
+  //actualizarDiasRestantes();
+  //setInterval(actualizarDiasRestantes, 24*60*60*1000); // Actualizar diario
   // Datos para el gráfico de líneas
 const dataLine1 = {
-  labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4', 'Día 5'], // Etiquetas de los días
+  labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 34',
-    data: [17, 15, 19, 12,25], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 39',
+    data: [8, 11, 13, 20], // Datos de los km recorridos en cada día
     borderColor: 'rgba(75, 192, 192, 1)',
     fill: true,
     tension: 0.1
@@ -14,16 +14,15 @@ const dataLine1 = {
 };
 
 const dataLine2 = {
-  labels: ['Día 1', 'Día 2', 'Dia 3', 'Día 4', 'Día 5'], // Etiquetas de los días
+  labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 35',
-    data: [10, 13, 10, 10, 15], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 40',
+    data: [14, 12, 12, 18], // Datos de los km recorridos en cada día
     borderColor: 'rgba(153, 102, 255, 1)',
     fill: true,
     tension: 0.1
   }]
 };
-
 // Configuración del gráfico de líneas
 const configLine = {
   type: 'line',
@@ -51,9 +50,10 @@ const myChartLine2 = new Chart(document.getElementById('myChart-line-2'), {
   }
 });
 
+
 function actualizarDiasRestantes() {
   // Fecha objetivo fija
-  const objetivoDate = new Date('2025-11-21');
+  const objetivoDate = new Date('2025-11-20');
   const currentDate = new Date();
   const timeDiff = objetivoDate - currentDate;
   const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
@@ -99,17 +99,4 @@ function actualizarDiasRestantes() {
   document.getElementById("Semana 2").appendChild(video3);
   document.getElementById("Semana 2").appendChild(video4);
 
-
-  audios.forEach(audio => {
-    audio.addEventListener("play", () => {
-      audios.forEach(otherAudio => {
-        if (otherAudio !== audio) {
-          otherAudio.pause();
-        }
-      });
-    });
-  });
-
-
 });
-
