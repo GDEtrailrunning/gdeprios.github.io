@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  actualizarDiasRestantes();
-  setInterval(actualizarDiasRestantes, 24*60*60*1000); // Actualizar diario
-   const chartFontFamily = '"Tajawal", Arial, sans-serif';
+  //actualizarDiasRestantes();
+  //setInterval(actualizarDiasRestantes, 24*60*60*1000); // Actualizar diario
+  // Datos para el gráfico de líneas
+const chartFontFamily = '"Tajawal", Arial, sans-serif';
 
   const sharedChartOptions = {
     responsive: true,
@@ -92,12 +93,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   };
-  // Datos para el gráfico de líneas
-const dataLine1 = {
+  const dataLine1 = {
   labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4', 'Día 5'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 31',
-    data: [8, 13, 6, 7, 12], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 33',
+    data: [10, 12, 8, 12, 30], // Datos de los km recorridos en cada día
     borderColor: 'rgba(75, 192, 192, 1)',
     fill: true,
     tension: 0.1
@@ -107,8 +107,8 @@ const dataLine1 = {
 const dataLine2 = {
   labels: ['Día 1', 'Día 2', 'Dia 3', 'Día 4'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 32',
-    data: [5, 4, 4, 21], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 34',
+    data: [27, 12, 12, 12, 20], // Datos de los km recorridos en cada día
     borderColor: 'rgba(153, 102, 255, 1)',
     fill: true,
     tension: 0.1
@@ -142,6 +142,7 @@ const myChartLine2 = new Chart(document.getElementById('myChart-line-2'), {
   }
 });
 
+  
 function actualizarDiasRestantes() {
   // Fecha objetivo fija
   const objetivoDate = new Date('2026-08-23');
