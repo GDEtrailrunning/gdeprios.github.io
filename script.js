@@ -96,8 +96,8 @@ const chartFontFamily = '"Tajawal", Arial, sans-serif';
   const dataLine1 = {
   labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4', 'Día 5'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 35',
-    data: [10, 11, 25, 10, 17], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 37',
+    data: [18, 14, 9, 10, 20], // Datos de los km recorridos en cada día
     borderColor: 'rgba(75, 192, 192, 1)',
     fill: true,
     tension: 0.1
@@ -107,8 +107,8 @@ const chartFontFamily = '"Tajawal", Arial, sans-serif';
 const dataLine2 = {
   labels: ['Día 1', 'Día 2', 'Dia 3', 'Día 4', 'Día 5'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 36',
-    data: [13, 10, 10, 35, 22], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 38',
+    data: [9, 13, 11, 9, 22], // Datos de los km recorridos en cada día
     borderColor: 'rgba(153, 102, 255, 1)',
     fill: true,
     tension: 0.1
@@ -145,7 +145,7 @@ const myChartLine2 = new Chart(document.getElementById('myChart-line-2'), {
   
 function actualizarDiasRestantes() {
   // Fecha objetivo fija
-  const objetivoDate = new Date('2026-08-23');
+  const objetivoDate = new Date('2026-10-17');
   const currentDate = new Date();
   const timeDiff = objetivoDate - currentDate;
   const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
